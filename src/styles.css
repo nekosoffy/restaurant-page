@@ -1,3 +1,17 @@
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('./fonts/kaushanscript-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'muliregular';
+    src: url('./fonts/muli-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -9,6 +23,9 @@
 
 :root {
     font-size: 62.5%;
+    --background-color: rgb(214, 206, 147);
+    --black-font-color: rgb(24, 23, 23);
+    --active-color: rgb(158, 153, 111);
 }
 
 body {
@@ -27,4 +44,58 @@ input, button, textarea, select {
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
+}
+
+header {
+    padding: 20px 6vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+}
+
+header button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 2.5rem;
+    font-family: 'muliregular', system-ui, sans-serif;
+    border-radius: 5px;
+    line-height: 2;
+    padding: 5px 20px;
+    transition: all 0.3s ease-in;
+}
+
+header button:active,
+header button:hover {
+    background-color: var(--active-color);
+}
+
+header button:active {
+    transform: scale(0.90);
+}
+
+
+#logo-wrapper {
+    display: flex;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+    font-family: 'kaushan_scriptregular', system-ui, sans-serif;
+    color: var(--logo-color);
+}
+
+#logo-wrapper > span:first-of-type {
+    font-size: 7rem;
+}
+
+#logo-wrapper > span:last-of-type {
+    margin-top: 20px;
+    font-size: 8rem;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    gap: 5vw;
+    justify-content: flex-end;
 }

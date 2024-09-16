@@ -31,6 +31,18 @@ function create(name, parent, id, htmlClass, text) {
     return element;
 }
 
+function handleButtonClick(event) {
+    const button = event.target;
+    if (button.id = "home-button") {
+        content.replaceChildren();
+        homePage();
+    }
+}
+
 homePage();
+
+const nav = select("nav");
+const content = select("#content");
+nav.addEventListener("click", handleButtonClick);
 
 export { select, selectAll, create };

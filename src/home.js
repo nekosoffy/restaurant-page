@@ -38,7 +38,6 @@ const homePage = () => {
     create("img", firstImage).src=homePictureOne;
     
     create("img", secondImage).src=homePictureTwo;
-
-}
+};
 
 export { homePage, select, create };

@@ -122,7 +122,7 @@ nav {
 
 #home article {
     display: flex;
-    gap: 30px;
+    gap: 3vw;
     align-items: center;
 }
 

@@ -1,5 +1,6 @@
 import "./styles.css";
 import { homePage } from "./home.js";
+import { menuPage } from "./menu.js";
 
 function select(target) {
     return document.querySelector(target);
@@ -33,16 +34,18 @@ function create(name, parent, id, htmlClass, text) {
 
 function handleButtonClick(event) {
     const button = event.target;
-    if (button.id = "home-button") {
-        content.replaceChildren();
+    if (button.id === "home-button") {
         homePage();
+    }
+    if (button.id === "menu-button") {
+        content.replaceChildren();
+        menuPage();
     }
 }
 
 homePage();
 
 const nav = select("nav");
-const content = select("#content");
 nav.addEventListener("click", handleButtonClick);
 
 export { select, selectAll, create };

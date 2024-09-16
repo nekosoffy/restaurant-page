@@ -4,6 +4,7 @@ import { select, selectAll, create } from "./index.js"
 
 const homePage = () => {
     const divContent = select("#content");
+    divContent.replaceChildren();
 
     create("div", divContent, "home");
 
@@ -40,4 +41,4 @@ const homePage = () => {
     create("img", secondImage).src=homePictureTwo;
 };
 
-export { homePage, select, create };
+export { homePage };

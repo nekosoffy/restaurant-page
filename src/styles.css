@@ -25,12 +25,18 @@
     font-size: 62.5%;
     --background-color: rgb(214, 206, 147);
     --black-font-color: rgb(24, 23, 23);
-    --active-color: rgb(158, 153, 111);
+    --header-active-color: rgb(158, 153, 111);
+    --home-active-color: rgb(136, 54, 41);
+    --main-font: 'muliregular', system-ui, sans-serif;
+    --h2-color: rgb(175, 70, 53);
 }
 
 body {
     -webkit-font-smoothing: antialiased;
     font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 img, picture, video, canvas, svg {
@@ -47,7 +53,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-    padding: 20px 6vw;
+    padding: 1.5vw 6vw 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +65,7 @@ header button {
     border: none;
     background-color: transparent;
     font-size: 2.5rem;
-    font-family: 'muliregular', system-ui, sans-serif;
+    font-family: var(--main-font);
     border-radius: 5px;
     line-height: 2;
     padding: 5px 20px;
@@ -68,7 +74,7 @@ header button {
 
 header button:active,
 header button:hover {
-    background-color: var(--active-color);
+    background-color: var(--header-active-color);
 }
 
 header button:active {
@@ -98,4 +104,80 @@ nav {
     display: flex;
     gap: 5vw;
     justify-content: flex-end;
+}
+
+#content {
+    flex-grow: 1;
+    background-color: var(--background-color);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+#home article {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+#home article:first-of-type h2 {
+    color: var(--h2-color);
+}
+
+#home article:last-of-type h2 {
+    font-size: 3.5rem;
+    text-decoration: underline;
+}
+
+#home article .text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: var(--main-font);
+}
+
+#home p {
+    width: 60ch;
+    font-size: 2rem;
+}
+
+#home button {
+    width: max-content;
+    margin-top: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    border-radius: 2px;
+    box-shadow: 6px 6px 0px 1px rgb(41, 40, 40);
+    background-color: var(--h2-color);
+    color: rgb(221, 208, 208);
+    line-height: 2;
+    padding: 5px 20px;
+}
+
+#home button:active,
+#home button:hover {
+    background-color: var(--home-active-color);
+}
+
+#home button:active {
+    box-shadow: none;
+    transform: translate(6px, 6px);
+}
+
+#home article img {
+    width: 300px;
+    height: 300px;
+    border: 5px solid #6e6257;
+    border-radius: 5px;
+    border-style: dashed;
+    box-shadow: 5px 5px 10px rgb(36, 35, 35);
 }

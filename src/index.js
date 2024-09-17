@@ -1,6 +1,7 @@
 import "./styles.css";
 import { homePage } from "./home.js";
 import { menuPage } from "./menu.js";
+import { storyPage } from "./story.js";
 
 function select(target) {
     return document.querySelector(target);
@@ -38,8 +39,10 @@ function handleButtonClick(event) {
         homePage();
     }
     if (button.id === "menu-button") {
-        content.replaceChildren();
         menuPage();
+    }
+    if (button.id === "about-button") {
+        storyPage();
     }
 }
 

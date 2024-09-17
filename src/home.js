@@ -13,7 +13,7 @@ const homePage = () => {
     create("article", home);
     create("article", home);
 
-    const [firstArticle, secondArticle] = selectAll("#home article");
+    const [firstArticle, secondArticle] = selectAll("article");
 
     create("div", firstArticle, "", "text-wrapper");
     create("div", firstArticle, "", "image-wrapper");
@@ -21,7 +21,7 @@ const homePage = () => {
     create("div", secondArticle, "", "image-wrapper");
     create("div", secondArticle, "", "text-wrapper");
 
-    const [firstText, secondText] = selectAll("#home .text-wrapper");
+    const [firstText, secondText] = selectAll(".text-wrapper");
     
     create("h2", firstText, "", "", `私たちの甘いデリカシーをお楽しみください！`);
     create("p", firstText, "", "", `Welcome to Hana, where we invite you to indulge in the serene experience of Japanese tea.
@@ -34,7 +34,7 @@ const homePage = () => {
     our commitment to quality and service ensures a delightful experience every time.`);
     create("button", secondText, "", "", `Order Now`).setAttribute("type","button");
 
-    const [firstImage, secondImage] = selectAll("#home .image-wrapper");
+    const [firstImage, secondImage] = selectAll(".image-wrapper");
 
     create("img", firstImage).src=homePictureOne;
     

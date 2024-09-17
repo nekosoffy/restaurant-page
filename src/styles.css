@@ -24,11 +24,14 @@
 :root {
     font-size: 62.5%;
     --background-color: rgb(214, 206, 147);
-    --black-font-color: rgb(24, 23, 23);
+    --black-font-color: rgb(27, 26, 26);
     --header-active-color: rgb(158, 153, 111);
     --home-active-color: rgb(136, 54, 41);
     --main-font: 'muliregular', system-ui, sans-serif;
+    --secondary-font: 'kaushan_scriptregular', sans-serif;
     --h2-color: rgb(175, 70, 53);
+    --border: 5px solid rgb(110, 98, 87);
+    --lighter-border: 3px solid rgb(148, 128, 109);
 }
 
 body {
@@ -37,6 +40,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    color: var(--black-font-color);
 }
 
 img, picture, video, canvas, svg {
@@ -176,8 +180,61 @@ nav {
 #home article img {
     width: 300px;
     height: 300px;
-    border: 5px solid #6e6257;
+    border: var(--border);
     border-radius: 5px;
     border-style: dashed;
     box-shadow: 5px 5px 10px rgb(36, 35, 35);
 }
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--main-font);
+    gap: 50px;
+    height: 100%;
+    padding: 60px 100px;
+}
+
+ul {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-top: 30px;
+}
+
+#menu h2 {
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    color: var(--h2-color);
+}
+
+#menu article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: var(--lighter-border);
+    border-style: dashed;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 2rem;
+    width: 500px;
+}
+
+#menu article:first-of-type {
+    align-self: flex-start;
+}
+
+#menu article:last-of-type {
+    align-self: flex-end;
+}
+
+#menu ul .bold {
+    font-weight: bold;
+}
+
